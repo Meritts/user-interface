@@ -1,0 +1,42 @@
+{
+    "name": "meritt/user-interface",
+    "description": "Base component for create user interface objects",
+    "type": "project",
+    "license": "proprietary",
+    "authors": [
+        {
+            "name": "Luís Otávio Cobucci Oblonczyk",
+            "email": "luis@meritt.com.br"
+        }
+    ],
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://packages.meritt.com.br",
+            "options": {
+                "ssl": {
+                    "local_cert": "/opt/meritt/meritt.pem"
+                }
+            }
+        }
+    ],
+    "require": {
+        "php": ">=5.4.0",
+        "meritt/gimme": "dev-develop",
+        "lcobucci/display-objects": "dev-develop"
+    },
+    "minimum-stability": "dev",
+    "require-dev": {
+        "phpunit/phpunit": "*@stable",
+        "squizlabs/php_codesniffer": "*@stable",
+        "pdepend/pdepend" : "*@stable",
+        "phpmd/phpmd" : "*@stable",
+        "phploc/phploc": "*",
+        "sebastian/phpcpd": "*@stable",
+        "phpdocumentor/phpdocumentor": "*",
+        "mikey179/vfsStream": "v1.2.0"
+    },
+    "autoload": {
+        "psr-0": { "Meritt": "src/" }
+    }
+}
