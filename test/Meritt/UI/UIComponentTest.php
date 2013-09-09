@@ -52,7 +52,6 @@ class UIComponentTest extends \PHPUnit_Framework_TestCase
                         ->will($this->returnValue('/testing/'));
 
         UIComponent::setManager($this->manager);
-
     }
 
     /**

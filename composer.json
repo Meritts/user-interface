@@ -23,7 +23,8 @@
     "require": {
         "php": ">=5.4.0",
         "meritt/gimme": "dev-develop",
-        "lcobucci/display-objects": "dev-develop"
+        "lcobucci/display-objects": "dev-develop",
+        "lcobucci/action-mapper": "dev-master"
     },
     "minimum-stability": "dev",
     "require-dev": {

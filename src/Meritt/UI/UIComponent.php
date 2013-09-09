@@ -2,6 +2,7 @@
 
 namespace Meritt\UI;
 
+use Lcobucci\ActionMapper2\Http\Request;
 use Meritt\Gimme\Package;
 use Meritt\Gimme\Receiver as ReceiverInterface;
 use Meritt\Gimme\UserInterface\Receiver;
@@ -12,6 +13,39 @@ abstract class UIComponent extends \Lcobucci\DisplayObjects\Core\UIComponent imp
 {
     use Receiver;
 
+    /**
+     * The HTTP request
+     *
+     * @var Request
+     */
+    protected static $request;
+
+    /**
+     * Configures the HTTP request
+     *
+     * @param Request $request
+     */
+    public static function setRequest(Request $request)
+    {
+        static::$request = $request;
+    }
+
+    /**
+     * Returns the HTTP request
+     *
+     * @return Request
+     */
+    protected function getRequest()
+    {
+        return static::$request;
+    }
+
+    /**
+     * Returns the string representation of the object
+     *
+     * @param string $class
+     * @return string
+     */
     public function show($class = null)
     {
         $content = parent::show($class);
