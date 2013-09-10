@@ -536,6 +536,12 @@
                 "url": "git@github.com:Meritts/gimme.git",
                 "reference": "55cab15afe08110100d0ce8a07c9a68c2cb99e0a"
             },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Meritts/gimme/zipball/55cab15afe08110100d0ce8a07c9a68c2cb99e0a",
+                "reference": "55cab15afe08110100d0ce8a07c9a68c2cb99e0a",
+                "shasum": ""
+            },
             "require": {
                 "dflydev/canal": "v1.0.0",
                 "doctrine/cache": "dev-master",
@@ -591,6 +597,10 @@
                 "compression",
                 "minification"
             ],
+            "support": {
+                "source": "https://github.com/Meritts/gimme/tree/develop",
+                "issues": "https://github.com/Meritts/gimme/issues"
+            },
             "time": "2013-08-27 20:18:59"
         },
         {
@@ -1350,12 +1360,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/schmittjoh/serializer.git",
-                "reference": "02d9b280b1fee531e8aad04d1cb3a60a50add4da"
+                "reference": "95536761d3a908fe6a662e80f74d751a66c830e9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/schmittjoh/serializer/zipball/02d9b280b1fee531e8aad04d1cb3a60a50add4da",
-                "reference": "02d9b280b1fee531e8aad04d1cb3a60a50add4da",
+                "url": "https://api.github.com/repos/schmittjoh/serializer/zipball/95536761d3a908fe6a662e80f74d751a66c830e9",
+                "reference": "95536761d3a908fe6a662e80f74d751a66c830e9",
                 "shasum": ""
             },
             "require": {
@@ -1396,7 +1406,7 @@
                 {
                     "name": "Johannes M. Schmitt",
                     "email": "schmittjoh@gmail.com",
-                    "homepage": "http://jmsyst.com",
+                    "homepage": "https://github.com/schmittjoh",
                     "role": "Developer of wrapped JMSSerializerBundle"
                 }
             ],
@@ -1409,7 +1419,7 @@
                 "serialization",
                 "xml"
             ],
-            "time": "2013-09-06 11:00:58"
+            "time": "2013-09-10 06:06:30"
         },
         {
             "name": "mikey179/vfsStream",
@@ -2350,12 +2360,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/php-code-coverage.git",
-                "reference": "906a767726f5bd451fbbe1d300ed46600d6c0934"
+                "reference": "466e7cd2554b4e264c9e3f31216d25ac0e5f3d94"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/php-code-coverage/zipball/906a767726f5bd451fbbe1d300ed46600d6c0934",
-                "reference": "906a767726f5bd451fbbe1d300ed46600d6c0934",
+                "url": "https://api.github.com/repos/sebastianbergmann/php-code-coverage/zipball/466e7cd2554b4e264c9e3f31216d25ac0e5f3d94",
+                "reference": "466e7cd2554b4e264c9e3f31216d25ac0e5f3d94",
                 "shasum": ""
             },
             "require": {
@@ -2403,7 +2413,7 @@
                 "testing",
                 "xunit"
             ],
-            "time": "2013-08-13 01:20:13"
+            "time": "2013-09-10 08:14:32"
         },
         {
             "name": "phpunit/php-file-iterator",
@@ -2590,16 +2600,16 @@
         },
         {
             "name": "phpunit/phpunit",
-            "version": "3.7.24",
+            "version": "3.7.25",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit.git",
-                "reference": "af7b77ccb5c64458bdfca95665d29558d1df7d08"
+                "reference": "162da5b9efbf2d483d4ee93dc54b7266d30beae2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/af7b77ccb5c64458bdfca95665d29558d1df7d08",
-                "reference": "af7b77ccb5c64458bdfca95665d29558d1df7d08",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/162da5b9efbf2d483d4ee93dc54b7266d30beae2",
+                "reference": "162da5b9efbf2d483d4ee93dc54b7266d30beae2",
                 "shasum": ""
             },
             "require": {
@@ -2660,7 +2670,7 @@
                 "testing",
                 "xunit"
             ],
-            "time": "2013-08-09 06:58:24"
+            "time": "2013-09-10 08:23:58"
         },
         {
             "name": "phpunit/phpunit-mock-objects",
@@ -2722,16 +2732,16 @@
         },
         {
             "name": "pimple/pimple",
-            "version": "dev-master",
+            "version": "v1.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/fabpot/Pimple.git",
-                "reference": "dd112b96b5836f896b01d344c85de1ed7140c334"
+                "reference": "ae11e57e8c2bb414b2ff93396dbbfc0eb92feb94"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/fabpot/Pimple/zipball/dd112b96b5836f896b01d344c85de1ed7140c334",
-                "reference": "dd112b96b5836f896b01d344c85de1ed7140c334",
+                "url": "https://api.github.com/repos/fabpot/Pimple/zipball/ae11e57e8c2bb414b2ff93396dbbfc0eb92feb94",
+                "reference": "ae11e57e8c2bb414b2ff93396dbbfc0eb92feb94",
                 "shasum": ""
             },
             "require": {
@@ -2740,7 +2750,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.1.x-dev"
+                    "dev-master": "1.0.x-dev"
                 }
             },
             "autoload": {
@@ -2764,7 +2774,7 @@
                 "container",
                 "dependency injection"
             ],
-            "time": "2013-08-29 06:29:11"
+            "time": "2013-03-08 08:21:40"
         },
         {
             "name": "psr/log",
@@ -3259,12 +3269,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/Validator.git",
-                "reference": "714d8b3aa864a79c8c37a5044feb4c2f43b775f4"
+                "reference": "f479eaaeeb96500f1602fe137c3272d2911bc044"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/Validator/zipball/714d8b3aa864a79c8c37a5044feb4c2f43b775f4",
-                "reference": "714d8b3aa864a79c8c37a5044feb4c2f43b775f4",
+                "url": "https://api.github.com/repos/symfony/Validator/zipball/f479eaaeeb96500f1602fe137c3272d2911bc044",
+                "reference": "f479eaaeeb96500f1602fe137c3272d2911bc044",
                 "shasum": ""
             },
             "require": {
@@ -3311,7 +3321,7 @@
             ],
             "description": "Symfony Validator Component",
             "homepage": "http://symfony.com",
-            "time": "2013-08-29 06:54:01"
+            "time": "2013-09-10 15:29:20"
         },
         {
             "name": "symfony/yaml",
