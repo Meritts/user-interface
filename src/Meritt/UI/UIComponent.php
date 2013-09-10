@@ -48,11 +48,20 @@ abstract class UIComponent extends \Lcobucci\DisplayObjects\Core\UIComponent imp
      */
     public function show($class = null)
     {
+        $this->configureRequirements();
+
         $content = parent::show($class);
 
         return $this->getStyleTags()
                . $content
                . $this->getScriptTags();
+    }
+
+    /**
+     * Configures the assets and behaviors that the component requires (should be overwrite when needed)
+     */
+    protected function configureRequirements()
+    {
     }
 
     /**
