@@ -107,7 +107,7 @@ abstract class UIComponent extends \Lcobucci\DisplayObjects\Core\UIComponent imp
     {
         if ($package->getMimeType() == 'application/javascript') {
             return sprintf(
-                '<script type="application/javascript" src="%s"></script>',
+                '<script type="text/javascript" src="%s"></script>',
                 $this->getUrl($package->getUri())
             );
         }
@@ -137,7 +137,7 @@ abstract class UIComponent extends \Lcobucci\DisplayObjects\Core\UIComponent imp
         }
 
         return sprintf(
-            '<script type="application/javascript">mcc.init_behaviors(%s);</script>',
+            '<script type="text/javascript">mcc.init_behaviors(%s);</script>',
             json_encode($map)
         );
     }

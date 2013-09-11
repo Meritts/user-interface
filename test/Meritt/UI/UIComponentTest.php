@@ -85,9 +85,9 @@ class UIComponentTest extends \PHPUnit_Framework_TestCase
 
         $text = '<link rel="stylesheet" type="text/css" href="/testing/css/test.css">'
                 . '<h1>Hello World</h1>'
-                . '<script type="application/javascript" src="/testing/js/test.js"></script>'
-                . '<script type="application/javascript" src="/testing/js/test2.js"></script>'
-                . '<script type="application/javascript">mcc.init_behaviors({"test":[[]]});</script>';
+                . '<script type="text/javascript" src="/testing/js/test.js"></script>'
+                . '<script type="text/javascript" src="/testing/js/test2.js"></script>'
+                . '<script type="text/javascript">mcc.init_behaviors({"test":[[]]});</script>';
 
         $this->assertEquals($text, $this->component->__toString());
     }
