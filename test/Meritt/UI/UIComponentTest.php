@@ -42,7 +42,7 @@ class UIComponentTest extends \PHPUnit_Framework_TestCase
 
         $this->component = $this->getMock(
             'Meritt\UI\UIComponent',
-            ['getBaseUrl', 'configureRequirements'],
+            ['getBaseUrl', 'configureRequirements', 'configure'],
             [],
             'TestComponent'
         );
@@ -95,10 +95,21 @@ class UIComponentTest extends \PHPUnit_Framework_TestCase
     /**
      * @test
      */
-    public function configureRequirementsMustCallBeforeShow()
+    public function configureRequirementsMustBeCalledBeforeShow()
     {
         $this->component->expects($this->once())
                         ->method('configureRequirements');
+
+        $this->component->__toString();
+    }
+
+    /**
+     * @test
+     */
+    public function configureMustBeCalledBeforeShow()
+    {
+        $this->component->expects($this->once())
+             ->method('configure');
 
         $this->component->__toString();
     }
