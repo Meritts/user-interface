@@ -145,7 +145,7 @@ abstract class UIComponent extends \Lcobucci\DisplayObjects\Core\UIComponent imp
         }
 
         return sprintf(
-            '<script type="text/javascript">mcc.init_behaviors(%s);</script>',
+            '<script type="text/javascript">require([\'mcc\', \'' . $hook->getBehavior() . '\'], function(mcc){ mcc.init_behaviors(%s); });</script>',
             json_encode($map)
         );
     }
