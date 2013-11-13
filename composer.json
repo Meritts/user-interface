@@ -28,7 +28,7 @@
     },
     "minimum-stability": "dev",
     "require-dev": {
-        "phpunit/phpunit": "*@stable",
+        "phpunit/phpunit": "3.7.*@dev",
         "squizlabs/php_codesniffer": "*@stable",
         "pdepend/pdepend" : "*@stable",
         "phpmd/phpmd" : "*@stable",

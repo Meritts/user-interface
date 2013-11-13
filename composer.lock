@@ -3,7 +3,7 @@
         "This file locks the dependencies of your project to a known state",
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
     ],
-    "hash": "51e0187316bfaa4437062aafb46f6043",
+    "hash": "3ba6c6488776afc4a969c92e7a56c36f",
     "packages": [
         {
             "name": "dflydev/apache-mime-types",
@@ -2628,16 +2628,16 @@
         },
         {
             "name": "phpunit/phpunit",
-            "version": "3.7.28",
+            "version": "3.7.x-dev",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit.git",
-                "reference": "3b97c8492bcafbabe6b6fbd2ab35f2f04d932a8d"
+                "reference": "236f65cc97d6beaa8fcb8a27b19bd278f3912677"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/3b97c8492bcafbabe6b6fbd2ab35f2f04d932a8d",
-                "reference": "3b97c8492bcafbabe6b6fbd2ab35f2f04d932a8d",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/236f65cc97d6beaa8fcb8a27b19bd278f3912677",
+                "reference": "236f65cc97d6beaa8fcb8a27b19bd278f3912677",
                 "shasum": ""
             },
             "require": {
@@ -2698,7 +2698,7 @@
                 "testing",
                 "xunit"
             ],
-            "time": "2013-10-17 07:27:40"
+            "time": "2013-11-06 01:58:51"
         },
         {
             "name": "phpunit/phpunit-mock-objects",
@@ -4112,7 +4112,7 @@
         "meritt/gimme": 20,
         "lcobucci/display-objects": 20,
         "lcobucci/action-mapper": 20,
-        "phpunit/phpunit": 0,
+        "phpunit/phpunit": 20,
         "squizlabs/php_codesniffer": 0,
         "pdepend/pdepend": 0,
         "phpmd/phpmd": 0,
