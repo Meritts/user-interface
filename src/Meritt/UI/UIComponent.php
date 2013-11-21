@@ -229,11 +229,11 @@ abstract class UIComponent extends Component implements ReceiverInterface
     /**
      * Configures the given component
      *
-     * @param UIComponent $component
+     * @param Component $component
      */
-    protected function configureComponent(UIComponent $component)
+    protected function configureComponent(Component $component)
     {
-        if ($component->configured) {
+        if (!$component instanceof UIComponent || $component->configured) {
             return ;
         }
 
