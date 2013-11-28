@@ -192,7 +192,6 @@ abstract class UIComponent extends Component implements ReceiverInterface
     public function show($class = null)
     {
         $this->configureComponent($this);
-        $this->configureChildren();
 
         $content = $this->getComponentContent($class);
 
@@ -239,6 +238,8 @@ abstract class UIComponent extends Component implements ReceiverInterface
 
         $component->configure();
         $component->configureRequirements();
+        $component->configureChildren();
+
         $component->configured = true;
     }
 
