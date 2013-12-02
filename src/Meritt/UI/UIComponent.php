@@ -9,6 +9,7 @@ use Meritt\Gimme\Package;
 use Meritt\Gimme\Receiver as ReceiverInterface;
 use Meritt\Gimme\UserInterface\Receiver;
 use Meritt\Gimme\UserInterface\ReceiverHook;
+use Symfony\Component\HttpFoundation\ParameterBag;
 
 abstract class UIComponent extends Component implements ReceiverInterface
 {
@@ -47,6 +48,11 @@ abstract class UIComponent extends Component implements ReceiverInterface
      * @var boolean
      */
     protected $configured;
+
+    /**
+     * @var ParameterBag
+     */
+    protected static $options;
 
     /**
      * Configures the HTTP request
@@ -341,5 +347,21 @@ abstract class UIComponent extends Component implements ReceiverInterface
             json_encode($hookList),
             json_encode($map)
         );
+    }
+
+    /**
+     * @param ParameterBag $options
+     */
+    public static function setOptions(ParameterBag $options)
+    {
+        static::$options = $options;
+    }
+
+    /**
+     * @return ParameterBag
+     */
+    public static function getOptions()
+    {
+        return static::$options;
     }
 }
