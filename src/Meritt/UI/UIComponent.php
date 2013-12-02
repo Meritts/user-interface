@@ -220,6 +220,10 @@ abstract class UIComponent extends Component implements ReceiverInterface
      */
     protected function configureChildren()
     {
+        if (!is_array($this->childNodes)) {
+            return ;
+        }
+
         foreach ($this->childNodes as $child) {
             $this->configureComponent($child);
         }
