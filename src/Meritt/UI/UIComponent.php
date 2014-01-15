@@ -274,7 +274,7 @@ abstract class UIComponent extends Component implements ReceiverInterface
     {
         $content = '';
 
-        foreach ($this->loadDependencies('text/css', true) as $dep) {
+        foreach ($this->loadDependencies('text/css') as $dep) {
             $content .= $this->createPackageTag($dep);
         }
 
@@ -289,7 +289,7 @@ abstract class UIComponent extends Component implements ReceiverInterface
     {
         $content = '';
 
-        foreach ($this->loadDependencies('application/javascript', true) as $dep) {
+        foreach ($this->loadDependencies('application/javascript') as $dep) {
             $content .= $this->createPackageTag($dep);
         }
 
