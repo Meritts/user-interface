@@ -4,6 +4,10 @@ namespace Meritt\UI;
 
 use Meritt\Gimme\Packages\StaticPackage;
 use org\bovigo\vfs\vfsStream;
+use Meritt\Gimme\Configuration\PackageConfiguration;
+use Meritt\Gimme\Metadata\PackageMetadata;
+use Meritt\Gimme\Configuration\Configuration;
+use Meritt\Gimme\Metadata\BuildInformation;
 
 class UIComponentTest extends \PHPUnit_Framework_TestCase
 {
@@ -59,9 +63,36 @@ class UIComponentTest extends \PHPUnit_Framework_TestCase
      */
     public function toStringMustIncludeTheComponentAssets()
     {
-        $pkg1 = new StaticPackage('js/test.js', 'application/javascript');
-        $pkg2 = new StaticPackage('css/test.css', 'text/css');
-        $pkg3 = new StaticPackage('js/test2.js', 'application/javascript');
+        $config = new Configuration();
+        $config->setSavedPackagesDir(vfsStream::url('testing'));
+        $config->setBaseUri('gimme');
+
+        $pkg1 = new StaticPackage(
+            $config->newPackageConfiguration('js/test.js', []),
+            new PackageMetadata(
+                1,
+                'application/javascript',
+                new BuildInformation(1, vfsStream::url('testing/gimme/1/js/test.js'), 1)
+            )
+        );
+
+        $pkg2 = new StaticPackage(
+            $config->newPackageConfiguration('css/test.css', []),
+            new PackageMetadata(
+                1,
+                'text/css',
+                new BuildInformation(1, vfsStream::url('testing/gimme/1/css/test.css'), 1)
+            )
+        );
+
+        $pkg3 = new StaticPackage(
+            $config->newPackageConfiguration('js/test2.js', []),
+            new PackageMetadata(
+                1,
+                'application/javascript',
+                new BuildInformation(1, vfsStream::url('testing/gimme/1/js/test2.js'), 1)
+            )
+        );
 
         $this->manager->expects($this->at(0))
                       ->method('get')
@@ -83,13 +114,14 @@ class UIComponentTest extends \PHPUnit_Framework_TestCase
         $this->component->requires('Meritt\Test\Assets\Css\test.less');
         $this->component->calls('Meritt\Test\Assets\Js\test2.coffee', 'test');
 
-        $text = '<link rel="stylesheet" type="text/css" href="/testing/css/test.css">'
-                . '<h1>Hello World</h1>'
-                . '<script type="text/javascript" src="/testing/js/test.js"></script>'
-                . '<script type="text/javascript" src="/testing/js/test2.js"></script>'
-                . '<script type="text/javascript">require(["mcc","test"], function(mcc){ mcc.init_behaviors({"test":[[]]}); });</script>';
+        $out = '<link rel="stylesheet" type="text/css" href="/testing/gimme/1/css/test.css">'
+               . '<h1>Hello World</h1>'
+               . '<script type="text/javascript" src="/testing/gimme/1/js/test.js"></script>'
+               . '<script type="text/javascript" src="/testing/gimme/1/js/test2.js"></script>'
+               . '<script type="text/javascript">'
+               . 'require(["mcc","test"], function(mcc){ mcc.init_behaviors({"test":[[]]}); });</script>';
 
-        $this->assertEquals($text, $this->component->__toString());
+        $this->assertEquals($out, $this->component->__toString());
     }
 
     /**
